@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { HeaderSection, Paragrpah } from '@/components/shared';
+import { Type } from '@/components/UI/BasicInput.astro';
+import { BasicButton,BasicInput, BasicTextarea } from '@/components/UI';
+---
+
+<Layout title='Contacto - Fabrica de pastas Doña Lola'>
+	<main>
+		<HeaderSection title='Contacto' bgImage='contacto-banner' />
+
+		<div class='p-10 flex flex-col md:gap-5 gap-0'>
+			<Paragrpah
+				text='Comentanos qué productos son de tu interés a través del siguiente formulario. Un representante de DOÑA LOLA se comunicará a la brevedad.'
+			/>
+
+			<form class='flex flex-col gap-3 mx-auto max-w-2xl w-full py-12'>
+                <BasicInput id='name' placeholder='Nombre y apellido' type={Type.Text}/>
+                <BasicInput id='phone' placeholder='Telefono' type={Type.Number}/>
+                <BasicInput id='email' placeholder='Correo electronico' type={Type.Email}/>
+				<BasicTextarea id="message" placeholder='Su consulta...'/>
+	
+				<BasicButton text='Enviar' />
+			</form>
+		</div>
+	</main>
+</Layout>

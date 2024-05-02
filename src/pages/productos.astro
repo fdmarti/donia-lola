@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { HeaderSection } from '@/components/shared';
+import { CardProducto } from '@/components/Card';
+import { productos } from '@/data/productos';
+---
+
+<Layout title='Productos - Fabrica de pastas Doña Lola'>
+	<main>
+		<HeaderSection bgImage='productos-banner' title='Productos' />
+		<div class='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5 py-10 gap-5'>
+			{
+				productos.map((producto) => {
+					return (
+						<CardProducto
+							title={producto.title}
+							description={producto.description}
+							image={producto.image}
+						/>
+					);
+				})
+			}
+		</div>
+	</main>
+</Layout>

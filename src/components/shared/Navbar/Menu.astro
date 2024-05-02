@@ -1,0 +1,10 @@
+---
+import { Link } from '@/components/shared/Navbar';
+import { links } from '@/data/links';
+---
+
+<div class="menu">
+	<ul class='hidden gap-4 font-semibold text-gray-100 md:flex'>
+		{links.map((link) => <Link text={link.text} url={link.url} />)}
+	</ul>
+</div>

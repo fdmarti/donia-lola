@@ -1,0 +1,12 @@
+---
+interface Props {
+	text?: string;
+	url?: string;
+}
+
+const { text = 'Default text', url = '#' } = Astro.props;
+---
+
+<li>
+	<a href={url}>{text}</a>
+</li>

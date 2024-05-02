@@ -1,0 +1,18 @@
+---
+import { CardRecetas } from '@/components/Card';
+import { BasicButton } from '@/components/UI';
+
+import { recetasCards } from '@/data/card-recetas';
+---
+
+<section class='flex flex-col items-center py-14' id='nuestras-recetas'>
+	<h2 class='text-orange-600 font-semibold sm:text-4xl text-2xl'>Nuestras recetas</h2>
+	<div class='flex justify-evenly gap-10 my-20 mx-5 lg:flex-row flex-col'>
+		{
+			recetasCards.map((receta) => {
+				return <CardRecetas receta={receta} />;
+			})
+		}
+	</div>
+	<BasicButton text='Todas las recetas' />
+</section>

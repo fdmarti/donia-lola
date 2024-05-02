@@ -1,0 +1,12 @@
+---
+interface Props {
+	title: string;
+	bgImage: string;
+}
+
+const { title, bgImage } = Astro.props;
+---
+
+<div class={`bg-${bgImage} bg-cover bg-no-repeat bg-center w-full h-[250px] flex flex-col justify-center p-10`}>
+	<h1 class='font-title text-red-600 text-6xl font-medium'>{title}</h1>
+</div>

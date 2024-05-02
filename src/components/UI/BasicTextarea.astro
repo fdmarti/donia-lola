@@ -1,0 +1,18 @@
+---
+interface Props {
+	id: string;
+	placeholder: string;
+}
+
+const { id, placeholder } = Astro.props;
+---
+
+<textarea
+	name={id}
+	id={id}
+	required
+	placeholder={placeholder}
+	class='border-gray-200 focus:!border-gray-500 rounded-md focus:!ring-gray-500 outline-none focus:bg-gray-100 sm:text-base text-sm'
+	rows="10"
+>
+</textarea>

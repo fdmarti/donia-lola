@@ -1,0 +1,54 @@
+---
+import { Navbar, Footer } from '@/components/shared';
+import ScrollTopBtn from '@/components/shared/ScrollTopBtn.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='Astro description' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/webp' href='/favicon.webp' />
+		<meta name='generator' content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class='min-h-screen'>
+		<Navbar />
+
+		<slot />
+		<ScrollTopBtn />
+		<Footer />
+		<script
+			is:inline
+			src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js'
+		></script>
+		<style is:global>
+			html {
+				scroll-behavior: smooth;
+				font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+					'Lucida Sans', Arial, sans-serif;
+			}
+		</style>
+		<script>
+			const buttonTop = document.querySelector('.button-top') as HTMLElement;
+
+			const handleScroll = () => {
+				const scroll = document.documentElement.scrollTop;
+				if (scroll > 700) {
+					buttonTop.style.display = 'block';
+				} else {
+					buttonTop.style.display = 'none';
+				}
+			};
+
+			window.addEventListener('scroll', handleScroll);
+		</script>
+	</body>
+</html>

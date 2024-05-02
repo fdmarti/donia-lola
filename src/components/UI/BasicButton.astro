@@ -1,0 +1,10 @@
+---
+interface Props {
+	text?: string;
+	isLoading?: boolean;
+}
+
+const { text = 'Default text', isLoading = false } = Astro.props;
+---
+
+<button class="bg-red-700 text-white px-5 py-3 rounded-full font-semibold hover:cursor-pointer hover:bg-red-800 z-50">{text}</button>

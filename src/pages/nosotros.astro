@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { HeaderSection, Paragrpah } from '@/components/shared';
+---
+
+<Layout title='Nosotros - Fabrica de pastas Doña Lola'>
+	<main>
+		<HeaderSection title='Nosotros' bgImage='nosotros-banner' />
+
+		<div class='md:p-16 p-10 bg-gray-50 w-full'>
+			<section class='flex flex-col md:gap-14 gap-10 max-w-7xl mx-auto'>
+				<Paragrpah
+					text='Somos una empresa familiar que surge en el año 2000 en la ciudad de Ramos Mejía, Bs. As. de la mano del Señor Norberto Pratticó e hijos. Nuestro objetivo es que todas las personas puedan disfrutar del sabor de las pastas que nos dejó de herencia la abuela Lola, disfrutando sus recetas magistrales.'
+				/>
+				<Paragrpah
+					text='La abuela reunía a toda la familia los domingos a saborear sus exquisitos platos. Sus comidas eran tan deliciosas, que a la reunión familiar, se sumaban amigos y vecinos. Es así que la abuela comenzó un micro emprendimiento y allá por el año 1998 empezó a vender sus productos a gente de la zona. Como ya no daba a basto con tantos pedidos, en el año 2000 la familia Pratticó decidió abrir una pequeña fábrica para que todos puedan disfrutar de las recetas de la abuela, o de Doña Lola como le decían en el barrio.'
+				/>
+
+				<Paragrpah
+					text='De a poco fuimos creciendo, con mucho esfuerzo y dedicación para que nuestros productos se destaquen en el mercado. Por éste motivo, elegimos las materias primas de primera calidad y nuestras pastas son elaboradas cumpliendo al máximo todas las normas de higiene y salubridad. Para lograr así, que lleguen a su hogar en inmejorable condiciones y puedan deleitarse como en su momento hacíamos nosotros con las comidas de la abuela Lola.'
+				/>
+			</section>
+		</div>
+	</main>
+</Layout>

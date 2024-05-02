@@ -1,0 +1,13 @@
+---
+interface Props {
+	width?: string;
+}
+
+const { width = '350' } = Astro.props;
+---
+
+<img
+	src='/images/logotipo.webp'
+	class={`z-50 w-[${width}px]`}
+	alt='doña lola logotipo'
+/>

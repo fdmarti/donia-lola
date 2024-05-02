@@ -1,0 +1,26 @@
+---
+import { SocialMedia } from '@/components/SocialMedia';
+
+const date = new Date();
+const currentDate = date.getFullYear();
+---
+
+<footer class='flex justify-between sm:flex-row sm:gap-0 gap-4 flex-col items-center sm:p-5 py-10 px-5 text-white bg-red-600 w-full bottom-0'>
+	<div class='flex flex-col gap-1 text-sm sm:text-left text-center'>
+		<p>Pastas Doña Lola</p>
+		<p>
+			Direccion :<a
+				href='https://maps.app.goo.gl/1XeeZpV7acN6A8W67'
+				class='hover:text-yellow-300'
+				target='_blank'
+			>
+				Paso 1125 - Ramos Mejía, Provincia de Buenos Aires
+			</a>
+		</p>
+		<p>Telefono: (011) 4488-9743</p>
+	</div>
+	<div class='flex flex-col items-center gap-2'>
+		<SocialMedia />
+		<p class='text-xs'>© {currentDate}</p>
+	</div>
+</footer>

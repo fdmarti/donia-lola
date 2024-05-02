@@ -1,0 +1,19 @@
+---
+interface Props {
+	receta: {
+		name: string;
+		url: string;
+	};
+}
+
+const { receta } = Astro.props;
+---
+
+<picture class='max-w-md'>
+	<img
+		src={`/images/nuestras-recetas/${receta.url}`}
+		alt={receta.name}
+		class='rounded-full hover:opacity-80 hover:cursor-pointer sm:max-w-sm max-w-52'
+		loading='lazy'
+	/>
+</picture>
